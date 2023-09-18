@@ -1,0 +1,213 @@
+.comment {
+    position: relative;
+    display: flex;
+    background-color: var(--white);
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 4px;
+}
+
+.assesmentBox {
+    min-width: 36px;
+}
+
+.likesBox {
+    padding: 12px 0;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 84px;
+    width: 100%;
+}
+
+.likesBox button {
+    border: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-size:contain;
+}
+
+
+.likesBox button{
+    transition: all 0.1s ease-in;
+}
+
+.likesBox .buttonPlus {
+    background-image: url("/public/images/plus-svgrepo.svg");
+}
+.likesBox .buttonPlus:hover {
+    background-image: url("/public/images/plus-svgrepo-hover.svg");
+}
+.likesBox .buttonPlus:active {
+    background-image: url("/public/images/plus-svgrepo-active.svg");
+}
+.likesBox .buttonMinus {
+    background-image: url("/public/images/minus-svgrepo.svg"); 
+}
+.likesBox .buttonMinus:hover {
+    background-image: url("/public/images/minus-svgrepo-hover.svg"); 
+}
+.likesBox .buttonMinus:active {
+    background-image: url("/public/images/minus-svgrepo-active.svg"); 
+}
+
+.likesBox .rating {
+    margin-top: 4px;
+    color: var(--moderate-blue);
+    font-weight: 500;
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.information img {
+    width: 32px;
+}
+
+.information .name {
+    font-weight: 600;
+}
+
+.information .meBlock{
+    color: var(--white);
+    background-color: var(--moderate-blue);
+    border-radius: 2px;
+    width: 32px;
+    height: 16px;
+    font-size: 12px;
+    text-align: center;
+    margin: auto 0;
+}
+
+.information .dateComment {
+    color: var(--grayish-blue);
+    font-weight: 300;
+    text-align: center;
+}
+
+.informationBox .commentText {
+    color: var(--grayish-blue);
+}
+
+.informationBox .commentTextarea {
+    color: var(--grayish-blue);
+    border: none;
+    overflow: hidden;
+    resize: none;
+    width: 100%;
+}
+
+
+.buttonBox {
+    position: absolute;
+    right: 20px;
+    margin-top: 8px;
+}
+
+.buttonBox button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-left: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.buttonBox button:hover{
+    opacity: 0.7;
+}
+.buttonBox button:active{
+    opacity: 0.9;
+}
+
+.buttonBox button img {
+    display: inline-block;
+}
+
+.buttonBox button p {
+    display: inline-block;
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+.buttonReplyEdit p {
+    color: var(--moderate-blue);
+}
+
+.buttonDelete p {
+    color: var(--soft-red);
+}
+
+
+
+@media (max-width:768px) {
+    .comment {
+        flex-direction: column-reverse
+    }
+
+    .information {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+
+    .assesmentBox {
+        max-width: 108px;
+    }
+
+    .likesBox {
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
+
+    .likesBox .rating {
+        margin-top: 0px;
+    }
+
+    .buttonBox {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width:320px) {
+    p {
+        font-size: 14px !important;
+    }
+
+    .comment {
+        padding: 8px;
+        gap: 14px;
+    }
+
+    .assesmentBox {
+        max-width: 84px;
+    }
+
+    .likesBox {
+        padding: 6px;
+    }
+
+    .buttonBox {
+        margin-bottom: 6px;
+        right: 8px;
+    }
+
+    .buttonBox button {
+        margin-left: 12px;
+    }
+
+    .buttonBox button p {
+        margin-left: 2px;
+    }
+}
